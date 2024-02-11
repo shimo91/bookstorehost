@@ -26,7 +26,7 @@ app.use('/api/login',loginRoutes)
 
 //book route
 const bookRoutes = require('./Routes/bookRoutes')
-app.use('/api/books',bookRoutes)
+app.use('/books',bookRoutes)
 
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname

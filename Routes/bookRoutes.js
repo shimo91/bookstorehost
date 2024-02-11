@@ -118,7 +118,7 @@ router.post('/bookRent', verifytoken, async (req, res) => {
 router.get('/getbooklist', verifytoken, async (req, res) => {
     try {
 
-        const data = await BookData.find().sort({ _id: -1 }).limit(18);
+        const data = await BookData.find().sort({ _id: -1 }).limit(19);
         // console.log("description :"+data)
         res.status(200).send(data);
     } catch (error) {
@@ -129,7 +129,7 @@ router.get('/getbooklist', verifytoken, async (req, res) => {
 router.get('/getfeatured', async (req, res) => {
     try {
 
-        const data = await BookData.find().sort({ _id: -1 }).limit(18);
+        const data = await BookData.find().sort({ _id: -1 }).limit(20);
          console.log("featured :"+data)
         res.status(200).send(data);
     } catch (error) {

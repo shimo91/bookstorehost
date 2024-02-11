@@ -130,9 +130,10 @@ router.get('/getfeatured', async (req, res) => {
     try {
 
         const data = await BookData.find().sort({ _id: -1 }).limit(20);
-        // console.log("description :"+data)
+         console.log("featured :"+data)
         res.status(200).send(data);
     } catch (error) {
+      console.error(error);
         res.status(400).send(error);
     }
 })

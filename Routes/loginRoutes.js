@@ -108,7 +108,7 @@ router.get('/:id', verifytoken, async (req, res) => {
     try {
         const id = req.params.id;
         const data = await userData.findById(id);
-        console.log("data is " + data)
+        //console.log("data is " + data)
         res.status(200).send(data);
     } catch (error) {
         res.status(400).send(error);
